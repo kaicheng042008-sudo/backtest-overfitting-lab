@@ -1,0 +1,127 @@
+{
+  "best_of_n": {
+    "n": [
+      1,
+      2,
+      5,
+      10,
+      25,
+      50,
+      100,
+      270,
+      500
+    ],
+    "simulated_annual_sharpe": [
+      0.11105997171806019,
+      0.3021947725020806,
+      0.5657230435096836,
+      0.8032273740463133,
+      0.9711224418299386,
+      1.114846762984501,
+      1.2750001526109047,
+      1.4220049874701883,
+      1.5174814954383467
+    ],
+    "formula_annual_sharpe": [
+      0.0,
+      0.2187608200570431,
+      0.5526538838371375,
+      0.7938706736943758,
+      0.9816079288725129,
+      1.1323133302584978,
+      1.2793048177620747,
+      1.4420977345851664,
+      1.5321049520856844
+    ],
+    "periods": 1000,
+    "reps": 100
+  },
+  "dsr_example": {
+    "n_trials": 270,
+    "n_obs": 1000,
+    "best_annual_sharpe": 1.363894715305375,
+    "luck_benchmark_annual_sharpe": 1.5014246189679827,
+    "naive_psr": 0.9964613004124538,
+    "deflated_sharpe_ratio": 0.39297635309275686
+  },
+  "calibration": {
+    "dsr_universes": 200,
+    "naive_share_above_95": 1.0,
+    "deflated_share_above_95": 0.0,
+    "dsr_power_by_annual_edge": {
+      "2.0": 0.24,
+      "3.0": 0.92
+    },
+    "dsr_power_universes": 100,
+    "pbo_null_universes": 12,
+    "pbo_null_mean": 0.5129111629111629,
+    "pbo_null_min": 0.2912975912975913,
+    "pbo_null_max": 0.8540792540792541,
+    "placebo_unrelated_signals": 200,
+    "placebo_share_p_below_05": 0.04
+  },
+  "pbo": {
+    "No skill anywhere": {
+      "pbo": 0.5221445221445221,
+      "mean_in_sample_annual_sharpe": 1.2155548502618012,
+      "mean_out_of_sample_annual_sharpe": -0.09629724330624802,
+      "prob_loss_out_of_sample": 0.5435120435120435,
+      "n_splits": 12870
+    },
+    "One real edge (annual Sharpe 1.0)": {
+      "pbo": 0.32735042735042735,
+      "mean_in_sample_annual_sharpe": 1.3976097765512996,
+      "mean_out_of_sample_annual_sharpe": 0.34138272416114385,
+      "prob_loss_out_of_sample": 0.33581973581973584,
+      "n_splits": 12870
+    },
+    "One real edge (annual Sharpe 2.0)": {
+      "pbo": 0.01616161616161616,
+      "mean_in_sample_annual_sharpe": 2.1849538243365707,
+      "mean_out_of_sample_annual_sharpe": 2.122619589277672,
+      "prob_loss_out_of_sample": 0.016394716394716395,
+      "n_splits": 12870
+    }
+  },
+  "placebo": {
+    "Signal with a real link to returns": {
+      "observed_annual_sharpe": 2.708993549901636,
+      "p_value": 0.0024987506246876563
+    },
+    "Equally persistent but unrelated signal": {
+      "observed_annual_sharpe": -0.1684533579817423,
+      "p_value": 0.7891054472763618
+    }
+  },
+  "lookahead": {
+    "bars_per_seed": 20000,
+    "seeds": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "biased_mean_bps_per_trade": 58.59600998001357,
+    "honest_mean_bps_per_trade": 0.5969267740322707,
+    "biased_t_stats": [
+      84.9984517878254,
+      71.86345003261602,
+      81.36902329757434,
+      75.46298074026186,
+      75.50921058164185,
+      85.14360107229146
+    ],
+    "honest_t_stats": [
+      0.9715604776928141,
+      0.479059015421827,
+      -0.11748231543046023,
+      -0.015281343254302577,
+      2.413423333198517,
+      0.7246840108399523
+    ],
+    "biased_trades": 5797,
+    "honest_trades": 10066
+  }
+}
